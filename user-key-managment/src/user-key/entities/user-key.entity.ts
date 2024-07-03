@@ -14,6 +14,6 @@ export class UserKey {
   @Column()
   rateLimit: number;
 
-  @Column({ type: 'timestamptz' })
+  @Column({ type: process.env.NODE_ENV == 'test' ? 'datetime' : 'timestamptz' })
   expiration: Date;
 }
