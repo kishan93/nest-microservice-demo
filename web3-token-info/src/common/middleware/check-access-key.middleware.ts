@@ -7,9 +7,9 @@ import {
 } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
 import * as moment from 'moment';
-import { CreateTokenAccessLogDto } from 'src/token-access-log/dto/create-token-access-log.dto';
-import { TokenAccessLogService } from 'src/token-access-log/token-access-log.service';
-import { UserKeyService } from 'src/user-key/user-key.service';
+import { CreateTokenAccessLogDto } from '../../token-access-log/dto/create-token-access-log.dto';
+import { TokenAccessLogService } from '../../token-access-log/token-access-log.service';
+import { UserKeyService } from '../../user-key/user-key.service';
 
 @Injectable()
 export class CheckAccessKeyMiddleware implements NestMiddleware {

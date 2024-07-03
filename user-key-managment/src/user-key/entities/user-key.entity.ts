@@ -14,6 +14,6 @@ export class UserKey {
   @Column()
   rateLimit: number;
 
-  @Column({ type: 'datetime' })
+  @Column({ type: 'timestamptz' })
   expiration: Date;
 }
