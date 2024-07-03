@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - "8054:8080"
+
+volumes:
+  pgdata:
