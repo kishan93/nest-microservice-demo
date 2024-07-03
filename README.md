@@ -122,3 +122,6 @@ generate key using the create user-key api
         - request header
          - X-App-Key: {token}
         - response code: 200
+
+## Issues
+- Delete user-key doesn't work if Api rate limit is reached
