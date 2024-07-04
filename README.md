@@ -105,7 +105,7 @@ generate key using the create user-key api
 
 - GET /token
     - request header
-     - X-App-Key: {token}
+        - X-App-Key: {token}
     - response
     ```json
     {
@@ -120,7 +120,7 @@ generate key using the create user-key api
     ```
 - DELETE /token/:id
     - request header
-     - X-App-Key: {token}
+        - X-App-Key: {token}
     - response code: 200
 
 ## Issues
