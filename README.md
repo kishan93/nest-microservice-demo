@@ -61,7 +61,7 @@ generate JWT token using the secret key set in the .env file
 
   - POST /user-key
     - request header
-     - Authorization: Bearer {token}
+        - Authorization: Bearer {token}
     - request body
     ```json
     {
@@ -82,7 +82,7 @@ generate JWT token using the secret key set in the .env file
     ```
  - GET /user-key
     - request header
-     - Authorization: Bearer {token}
+        - Authorization: Bearer {token}
     - response
     ```json
     [
@@ -97,31 +97,31 @@ generate JWT token using the secret key set in the .env file
     ```
  - DELETE /user-key/:id
     - request header
-     - Authorization: Bearer {token}
+        - Authorization: Bearer {token}
     - response code: 200
 
 ### web3-token-info microservice
 generate key using the create user-key api
 
-    - GET /token
-        - request header
-         - X-App-Key: {token}
-        - response
-        ```json
-        {
-            "id": "123",
-            "symbol": "BTC",
-            "name": "Bitcoin",
-            "platform": {
-                "ethereum": "0x123",
-                "polygon": "0x456"
-            }
+- GET /token
+    - request header
+     - X-App-Key: {token}
+    - response
+    ```json
+    {
+        "id": "123",
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "platform": {
+            "ethereum": "0x123",
+            "polygon": "0x456"
         }
-        ```
-    - DELETE /token/:id
-        - request header
-         - X-App-Key: {token}
-        - response code: 200
+    }
+    ```
+- DELETE /token/:id
+    - request header
+     - X-App-Key: {token}
+    - response code: 200
 
 ## Issues
 - Delete user-key doesn't work if Api rate limit is reached
